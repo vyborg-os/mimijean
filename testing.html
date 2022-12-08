@@ -1,0 +1,60 @@
+<html>
+<head>
+ <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="col-lg-12">
+<div class="row">
+<div class="col-lg-6">
+<form>
+<div class="form-group">
+<input type="text" id="msg" class="form-control mt-9" name="message" autocomplete="off">
+</div>
+<div class="form-group">
+<button id="send" type="button" class="btn btn-round btn-default" >Send</button>
+</div>
+
+</form>
+</div>
+<div class="col-lg-6">
+<div id="disp" class="alert-success mt-3 mb-8" style="">
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+function append_to_div(div_name, data){
+	document.getElementById(div_name).innerText += data;
+	}
+	document.getElementById("send")
+	 .addEventListener('click', function() {
+		var message = document.getElementById("msg");
+		var value = message.value.trim();
+		
+		if(!value)
+			alert("Message Cannot be Empty!");
+		else
+			append_to_div("disp", value+"\n");
+			
+		message.value = "";
+	 });
+</script>
+</body>
+</html> 
